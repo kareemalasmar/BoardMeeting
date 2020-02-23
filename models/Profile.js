@@ -9,8 +9,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   skillLevel: {
-    type: String,
-    required: true
+    type: String
   },
   years: {
     type: String,
@@ -31,9 +30,6 @@ const ProfileSchema = new mongoose.Schema({
       type: String
     },
     facebook: {
-      type: String
-    },
-    linkedin: {
       type: String
     },
     instagram: {
