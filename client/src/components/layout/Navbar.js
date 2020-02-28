@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className='navbar bg-dark'>
       <h1>
         <a href='index.html'>
-          <i className='far fa-snowflake'></i> Board Meeting
+          <i className='far fa-snowflake fa-spin'></i> Board Meeting
         </a>
       </h1>
       <ul>
