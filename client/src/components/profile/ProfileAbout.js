@@ -17,7 +17,7 @@ const ProfileAbout = ({
       </Fragment>
     )}
     <h2 className='text-primary'>Mountains</h2>
-    <div className='skills'>
+    <div className='mountains'>
       {mountains.map((mountain, index) => (
         <div key={index} className='p-1'>
           <i className='fas fa-mountain'></i> {mountain}

@@ -22,7 +22,7 @@ const ProfileItem = ({
       <ul>
         {mountains.slice(0, 4).map((mountain, index) => (
           <li key={index} className='text-primary'>
-            <i className='fas fa-check'></i> {mountain}
+            <i className='fas fa-mountain'></i> {mountain}
           </li>
         ))}
       </ul>

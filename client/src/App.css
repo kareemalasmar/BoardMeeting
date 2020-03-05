@@ -391,7 +391,7 @@ button {
   text-align: center;
 }
 
-.profile-about .skills {
+.profile-about .mountains {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -550,7 +550,7 @@ button {
       'github';
   }
 
-  .profile-about .skills {
+  .profile-about .mountains {
     flex-direction: column;
   }
 
