@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Moment from 'react-moment';
@@ -30,7 +30,7 @@ const PostItem = ({
         className='btn btn-light'
       >
         <i className='fas fa-thumbs-up'></i>{' '}
-        {likes.length > 0 && <span>{likes.length}</span>}
+        <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
       </button>
       <button
         onClick={e => removeLike(_id)}
