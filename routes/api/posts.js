@@ -242,7 +242,7 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
   }
 });
 
-// @route   PUT api/posts/comment/like/:id
+// @route   PUT api/posts/comment/like/:id/:comment_id
 // @desc    Like a comment
 // @access  Private
 router.put('/comment/like/:id/:comment_id', auth, async (req, res) => {
@@ -263,6 +263,42 @@ router.put('/comment/like/:id/:comment_id', auth, async (req, res) => {
     }
 
     comment.commentLikes.unshift({ user: req.user.id });
+
+    await post.save();
+
+    res.json(comment.commentLikes);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route   PUT api/posts/comment/unlike/:id/:comment_id
+// @desc    Unlike a comment
+// @access  Private
+router.put('/comment/unlike/:id/:comment_id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+
+    // Pull comment from the post
+    const comment = post.comments.find(
+      comment => comment.id === req.params.comment_id
+    );
+
+    // Check if post has been liked by current user
+    if (
+      comment.commentLikes.filter(like => like.user.toString() === req.user.id)
+        .length === 0
+    ) {
+      return res.status(400).json({ msg: 'Post has not yet been liked' });
+    }
+
+    // Get remove index
+    const removeIndex = comment.commentLikes
+      .map(like => like.user.toString())
+      .indexOf(req.user.id);
+
+    comment.commentLikes.splice(removeIndex, 1);
 
     await post.save();
 
