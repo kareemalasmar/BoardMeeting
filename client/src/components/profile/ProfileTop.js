@@ -15,6 +15,7 @@ const ProfileTop = ({
       <img className='round-img my-1' src={avatar} alt='avatar' />
       <h1 className='large'>{name}</h1>
       <p className='lead'>{skillLevel} Snowboarder</p>
+      <p>{years && <span> Years riding: {years}</span>}</p>
       <p>{location && <span>{location}</span>}</p>
       <div className='icons my-1'>
         {social && social.twitter && (
