@@ -8,7 +8,8 @@ import {
   DELETE_POST,
   ADD_POST,
   ADD_COMMENT,
-  REMOVE_COMMENT
+  REMOVE_COMMENT,
+  UPDATE_COMMENT_LIKES
 } from './types';
 
 // Get posts
@@ -28,7 +29,7 @@ export const getPosts = () => async dispatch => {
   }
 };
 
-// Add like
+// Add post like
 export const addLike = id => async dispatch => {
   try {
     const res = await axios.put(`api/posts/like/${id}`);
@@ -48,7 +49,7 @@ export const addLike = id => async dispatch => {
   }
 };
 
-// Remove like
+// Remove post like
 export const removeLike = id => async dispatch => {
   try {
     const res = await axios.put(`api/posts/unlike/${id}`);
@@ -169,6 +170,28 @@ export const deleteComment = (postId, commentId) => async dispatch => {
     });
 
     dispatch(setAlert('Comment Removed', 'success'));
+  } catch (err) {
+    dispatch({
+      type: POST_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
+
+// Add comment like
+export const addCommentLike = (postId, commentId) => async dispatch => {
+  try {
+    const res = await axios.put(
+      `/api/posts/comment/like/${postId}/${commentId}`
+    );
+
+    dispatch({
+      type: UPDATE_COMMENT_LIKES,
+      payload: {
+        commentId,
+        commentLikes: res.data
+      }
+    });
   } catch (err) {
     dispatch({
       type: POST_ERROR,
