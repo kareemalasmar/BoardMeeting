@@ -481,6 +481,10 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.hide-lg {
+  display: none;
+}
+
 /* Mobile Styles */
 @media (max-width: 700px) {
   .container {
@@ -489,6 +493,10 @@ button {
 
   .hide-sm {
     display: none;
+  }
+
+  .show-sm {
+    display: inline;
   }
 
   /* Text Styles */
