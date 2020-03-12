@@ -14,7 +14,7 @@ const DashboardActions = ({
         <i className='fas fa-user-circle text-primary'></i> Edit Profile
       </Link>
       <Link to={`/profile/${_id}`} className='btn btn-primary'>
-        View Profile
+        <i className='fas fa-eye text-secondary'></i> View Profile
       </Link>
     </div>
   );
