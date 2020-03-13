@@ -24,7 +24,7 @@ const ProfileSchema = new mongoose.Schema({
   bio: {
     type: String
   },
-  log: [
+  experience: [
     {
       title: {
         type: String,
@@ -38,11 +38,11 @@ const ProfileSchema = new mongoose.Schema({
         type: String
       },
       date: {
-        type: Date,
-        required: true
+        type: Date
       },
       description: {
-        type: String
+        type: String,
+        required: true
       }
     }
   ],
