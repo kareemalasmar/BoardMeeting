@@ -40,7 +40,7 @@ const ProfileSchema = new mongoose.Schema({
       date: {
         type: Date
       },
-      description: {
+      notes: {
         type: String,
         required: true
       }

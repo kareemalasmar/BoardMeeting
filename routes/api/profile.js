@@ -175,7 +175,7 @@ router.put(
       check('mountain', 'Mountain is required')
         .not()
         .isEmpty(),
-      check('description', 'Description is required')
+      check('notes', 'Notes is required')
         .not()
         .isEmpty()
     ]
@@ -186,14 +186,14 @@ router.put(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    const { title, mountain, location, date, description } = req.body;
+    const { title, mountain, location, date, notes } = req.body;
 
     const newExp = {
       title,
       mountain,
       location,
       date,
-      description
+      notes
     };
 
     try {

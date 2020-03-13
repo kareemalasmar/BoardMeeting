@@ -13,6 +13,9 @@ const DashboardActions = ({
       <Link to='/edit-profile' className='btn btn-light'>
         <i className='fas fa-user-circle text-primary'></i> Edit Profile
       </Link>
+      <Link to='/add-experience' className='btn btn-light'>
+        <i className='fas fa-mountain text-primary'></i> Add Log Entry
+      </Link>
       <Link to={`/profile/${_id}`} className='btn btn-primary'>
         <i className='fas fa-eye text-secondary'></i> View Profile
       </Link>
