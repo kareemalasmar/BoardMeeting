@@ -24,6 +24,28 @@ const ProfileSchema = new mongoose.Schema({
   bio: {
     type: String
   },
+  log: [
+    {
+      title: {
+        type: String,
+        required: true
+      },
+      mountain: {
+        type: String,
+        required: true
+      },
+      location: {
+        type: String
+      },
+      date: {
+        type: Date,
+        required: true
+      },
+      description: {
+        type: String
+      }
+    }
+  ],
   social: {
     youtube: {
       type: String
