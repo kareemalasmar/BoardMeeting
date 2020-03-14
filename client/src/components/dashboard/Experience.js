@@ -7,7 +7,6 @@ const Experience = ({ experience }) => {
   const experiences = experience.map(exp => (
     <tr key={exp._id}>
       <td>{exp.title}</td>
-      <td className='hide-sm'></td>
       <td>
         <Moment format='MM/DD/YYYY'>{exp.date}</Moment>
       </td>
