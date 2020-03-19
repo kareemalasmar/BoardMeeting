@@ -7,11 +7,9 @@ const ProfileSchema = new mongoose.Schema({
   },
   location: {
     type: String
-    // Consider making required
   },
   skillLevel: {
     type: String
-    // Consider making required
   },
   years: {
     type: String,

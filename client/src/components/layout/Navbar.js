@@ -10,7 +10,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/profiles'>
           <span className='show-sm hide-lg'>
-            <i class='fas fa-snowboarding'></i>{' '}
+            <i className='fas fa-snowboarding'></i>{' '}
           </span>
           <span className='hide-sm'>Riders</span>
         </Link>
@@ -18,7 +18,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/posts'>
           <span className='show-sm hide-lg'>
-            <i class='fas fa-comment-alt'></i>{' '}
+            <i className='fas fa-comment-alt'></i>{' '}
           </span>
           <span className='hide-sm'>Posts</span>
         </Link>
