@@ -87,11 +87,6 @@ export default function(state = initialState, action) {
               : comment
           )
         },
-        // post: state.post.comments.map(comment =>
-        //   comment._id === payload.commentId
-        //     ? { ...comment, commentLikes: payload.commentLikes }
-        //     : comment
-        // ),
         loading: false
       };
     default:
