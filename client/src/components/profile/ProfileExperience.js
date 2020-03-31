@@ -8,7 +8,7 @@ const ProfileExperience = ({
   <div>
     <h3 className='text-dark'>{title}</h3>
     <p>
-      <Moment format='YYYY/MM/DD'>{date}</Moment>
+      <Moment format='MM/DD/YYYY'>{date}</Moment>
     </p>
     <p>
       <strong>{mountain}</strong>
