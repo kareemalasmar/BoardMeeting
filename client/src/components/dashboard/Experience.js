@@ -15,22 +15,22 @@ const Experience = ({ experience, deleteExperience }) => {
       <td>
         <button
           onClick={() => deleteExperience(exp._id)}
-          className='btn btn-danger'
+          className='btn btn-danger log-delete'
         >
-          Delete
+          X
         </button>
       </td>
     </tr>
   ));
   return (
     <Fragment>
-      <h2 className='my-2'>Rider Log</h2>
+      <h2 className='my-2'>Rider's Log</h2>
       <table className='table'>
         <thead>
           <tr>
             <th>Title</th>
-            <th className='hide-sm'>Date</th>
-            <th className='hide-sm'>Mountain</th>
+            <th>Date</th>
+            <th>Mountain</th>
           </tr>
         </thead>
         <tbody>{experiences}</tbody>

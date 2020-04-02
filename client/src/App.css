@@ -295,6 +295,11 @@ button {
   text-align: left;
 }
 
+td {
+  /* border-bottom: 2px solid gray; */
+  border-top: 2px solid gray;
+}
+
 .table th {
   background: var(--light-color);
 }
@@ -553,6 +558,18 @@ button {
   .post a,
   .post button {
     padding: 0.3rem 0.4rem;
+  }
+
+  .log-delete {
+    font-size: 10px;
+    width: 10px;
+    padding: 5px 10px;
+  }
+
+  /* Dashboard*/
+  .table th,
+  .table td {
+    padding: 0.5rem;
   }
 }
 
