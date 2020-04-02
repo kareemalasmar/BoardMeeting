@@ -55,7 +55,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='far fa-snowflake fa-spin' /> Board Meeting
+          <i className='far fa-snowflake fa-spin' /> BoardMeeting
         </Link>
       </h1>
       {!loading && (

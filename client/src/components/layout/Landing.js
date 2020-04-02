@@ -11,7 +11,7 @@ const Landing = ({ isAuthenticated }) => {
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>Board Meeting</h1>
+          <h1 className='x-large'>BoardMeeting</h1>
           <p className='lead'>
             Create a snowbaording profile, share posts and communicate other
             boarders
